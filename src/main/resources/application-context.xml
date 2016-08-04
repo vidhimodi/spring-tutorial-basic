@@ -5,9 +5,9 @@
     http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
 
-    <bean class="com.endurance.india.MessagePrinter">
-        <property name="message" value="Hello World!!" />
-        <property name="iterations" value="5" />
+    <bean class="com.endurance.india.MessagePrinter" name="printer">
+        <property name="message" value="Original Message Set while initialization." />
+        <property name="iterations" value="1" />
     </bean>
     
 </beans>
