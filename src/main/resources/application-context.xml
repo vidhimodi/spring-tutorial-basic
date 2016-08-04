@@ -8,9 +8,11 @@
     <bean class="com.endurance.india.dao.MySQLDatabase" name="dao"/>
     <bean class="com.endurance.india.mailer.DefaultMailer" name="mailer"/>
 
-    <bean class="com.endurance.india.Dashboard">
+    <bean class="com.endurance.india.Dashboard" init-method="customInitMethod" destroy-method="customDistroyMethod">
         <constructor-arg name="dao" ref="dao"/>
         <constructor-arg name="mailer" ref="mailer"/>
+        <property name="title" value="My Dashboard" />
     </bean>
-    
+
+    <bean class="com.endurance.india.DashboardPostInitProcessor" />
 </beans>
