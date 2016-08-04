@@ -14,8 +14,28 @@ public class Dashboard {
         mailer.sendMail();
     }
 
+    public Dashboard(){}
+
     public Dashboard(Database dao, Mailer mailer) {
         this.dao = dao;
+        this.mailer = mailer;
+    }
+
+    public Database getDao() {
+        return dao;
+    }
+
+    public void setDao(Database dao) {
+        System.out.println("Setting dao");
+        this.dao = dao;
+    }
+
+    public Mailer getMailer() {
+        return mailer;
+    }
+
+    public void setMailer(Mailer mailer) {
+        System.out.println("Setting mailer");
         this.mailer = mailer;
     }
 }

@@ -8,9 +8,6 @@
     <bean class="com.endurance.india.dao.MySQLDatabase" name="dao"/>
     <bean class="com.endurance.india.mailer.DefaultMailer" name="mailer"/>
 
-    <bean class="com.endurance.india.Dashboard">
-        <constructor-arg name="dao" ref="dao"/>
-        <constructor-arg name="mailer" ref="mailer"/>
-    </bean>
+    <bean class="com.endurance.india.Dashboard" autowire="constructor" />
     
 </beans>
