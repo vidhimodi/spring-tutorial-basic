@@ -1,5 +1,8 @@
 package com.endurance.india.dao;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MySQLDatabase implements Database {
 
     @Override

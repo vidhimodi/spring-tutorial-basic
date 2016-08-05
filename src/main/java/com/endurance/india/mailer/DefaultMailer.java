@@ -1,5 +1,8 @@
 package com.endurance.india.mailer;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class DefaultMailer implements Mailer{
 
     @Override

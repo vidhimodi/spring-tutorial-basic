@@ -2,11 +2,14 @@ package com.endurance.india;
 
 import com.endurance.india.dao.Database;
 import com.endurance.india.mailer.Mailer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Dashboard {
 
-    private Database dao;
-    private Mailer mailer;
+    @Autowired private Database dao;
+    @Autowired private Mailer mailer;
 
     public void doSomething(){
         dao.executeQuery("SELECT * FROM table");
@@ -15,11 +18,6 @@ public class Dashboard {
     }
 
     public Dashboard(){}
-
-    public Dashboard(Database dao, Mailer mailer) {
-        this.dao = dao;
-        this.mailer = mailer;
-    }
 
     public Database getDao() {
         return dao;
