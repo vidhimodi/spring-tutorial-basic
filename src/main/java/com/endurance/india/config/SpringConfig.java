@@ -31,13 +31,13 @@ public class SpringConfig {
     @Value("classpath:db/sql/populate.sql")
     private Resource dataScript;
 
-    @Bean
-    public DataSourceInitializer dataSourceInitializer() {
-        final DataSourceInitializer initializer = new DataSourceInitializer();
-        initializer.setDataSource(dataSource());
-        initializer.setDatabasePopulator(databasePopulator());
-        return initializer;
-    }
+//    @Bean
+//    public DataSourceInitializer dataSourceInitializer() {
+//        final DataSourceInitializer initializer = new DataSourceInitializer();
+//        initializer.setDataSource(dataSource());
+//        initializer.setDatabasePopulator(databasePopulator());
+//        return initializer;
+//    }
 
     private DatabasePopulator databasePopulator() {
         final ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
