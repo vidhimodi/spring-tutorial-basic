@@ -3,7 +3,7 @@
 <%@ page trimDirectiveWhitespaces="true" %>
 <html>
 <head lang="en">
-    <title>Tiny Url</title>
+    <title>Employees</title>
 
     <style>
         table {
@@ -31,16 +31,16 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th>TinyUrl</th>
-            <th>LongUrl</th>
+            <th>Name</th>
+            <th>Department</th>
         </tr>
         </thead>
         <tbody>
         <c:forEach var="mapping" items="${mapList}">
             <tr>
-                <td>${mapping.id}</td>
-                <td><a href="${mapping.tinyUrl}" target="_blank">${mapping.tinyUrl}</a></td>
-                <td><a href="${mapping.longUrl}" target="_blank">${mapping.longUrl}</a></td>
+                <td><p>${mapping.id}</p></td>
+                <td><p>${mapping.name}</p></td>
+                <td><p>${mapping.department}</p></td>
             </tr>
         </c:forEach>
         </tbody>

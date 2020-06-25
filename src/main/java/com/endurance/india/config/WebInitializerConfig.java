@@ -14,6 +14,7 @@ public class WebInitializerConfig implements WebApplicationInitializer {
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
         ctx.register(SpringMvcConfiguration.class);
+        //ctx.setConfigLocation("com.endurance.india.config");
 
         ctx.setServletContext(servletContext);
 

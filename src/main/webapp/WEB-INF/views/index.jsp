@@ -3,7 +3,7 @@
 <%@ page trimDirectiveWhitespaces="true" %>
 <html>
 <head lang="en">
-    <title>Tiny Url</title>
+    <title>Home</title>
 </head>
 <body>
 <div>
@@ -16,12 +16,9 @@
             Url: <a href="${url}" target="_blank">${url}</a>
         </div>
     </c:if>
-    <form action="<c:url value="/new_entry"/>" method="post">
-        <input name="longUrl" id="longUrl" placeholder="Enter the web url."/>
-        <button type="submit" name="newEntry">Submit Url</button>
-    </form>
     <br/>
-    <a href="<c:url value="/admin/"/>">Admin</a>
+    <h2>SPRING MVC DEMO</h2>
+    <a href="<c:url value="/employees/"/>">Employees</a>
 </div>
 </body>
 </html>
